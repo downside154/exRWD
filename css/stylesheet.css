@@ -44,6 +44,12 @@ a img {
   height: 1px;
   margin: -1px;
 }
+.reset-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
 /* 헤더 디자인 */
 .app-header{
   background: rgba(255, 255, 255, 0.4);
@@ -54,6 +60,8 @@ a img {
   border-bottom: 1px solid #e0e0e0;
   display: flex;
   justify-content: space-between;
+  z-index: 100;
+  /* backdrop-filter: blur(20px); */
 }
 /* 로고 */
 .brand{
@@ -133,4 +141,50 @@ a img {
   font-size: 40px;
   line-height: 0.5;
   transition: all 0.4s ease;
+}
+/* 메인 콘텐츠 - 이디야 추천 음료 */
+.app-main{
+  padding: 70px 20px 20px 20px;
+}
+.ediya-menu{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 20px;
+}
+.ediya-menu__item{
+  border: 1px solid #e0e0e0;
+}
+.ediya-menu__item a{
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.ediya-menu__item figure{
+  margin: 0;
+  text-align: center;
+}
+.ediya-menu__item img{
+  transform: scale(0.85);
+  transition: all 0.4s;
+  max-width: 100%;
+  height: auto;
+}
+.ediya-menu__item a:hover img,
+.ediya-menu__item a:focus img{
+  transform: scale(1);
+}
+.ediya-menu__item figcaption{
+  padding: 1em 0;
+}
+/*  Medium 이상 디바이스 */
+@media screen and (min-width: 720px){
+  .app-main{
+    padding-top: 90px;
+  }
+  .ediya-menu{
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+
 }
