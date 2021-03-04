@@ -19,32 +19,22 @@ body {
   min-height: 100vh;
 }
 
-nav a {
-  color: inherit;
-  text-decoration: none;
-}
-
 a img {
   vertical-align: middle;
 }
-
 /* 공통 클래스 */
-
 .respons{
   max-width: 100%;
   height: auto;
 }
-
 .respons-svg{
   width: 100%;
   height: auto;
 }
-
 .button {
   cursor: pointer;
   border: none;
 }
-
 .a11y-hidden {
   overflow: hidden;
   position: absolute !important;
@@ -54,9 +44,7 @@ a img {
   height: 1px;
   margin: -1px;
 }
-
 /* 헤더 디자인 */
-
 .app-header{
   background: rgba(255, 255, 255, 0.4);
   position: fixed;
@@ -74,11 +62,10 @@ a img {
 .brand a {
   display: block;
   width: 225px;
-  padding: 10px 15px;
+  padding: 15px;
 }
-
-/* 버튼 디자인*/
-.app-header .is-open-menu {
+/* 메인 메뉴 열기 버튼 */
+.is-open-menu {
   user-select: none;
   padding: 20px;
   background: #ffffff;
@@ -91,11 +78,10 @@ a img {
   height: 22px;
   background: url(../images/navigation-button.gif) no-repeat 50%;
 }
-
-/* 내비게이션 메인메뉴 디자인 */
+/* 메인 메뉴 */
 
 .app-navigation {
-  display:flex;
+  display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
   align-items: flex-start;
@@ -113,9 +99,13 @@ a img {
   transform: translateX(105vw);
   backdrop-filter: blur(2px);
 }
-
 .app-navigation.is-active {
   transform: translateX(0);
+}
+.app-navigation ul{
+  width: 100%;
+  list-style: none;
+  margin: 0;
 }
 
 .app-navigation li {
@@ -126,21 +116,14 @@ a img {
   display: block;
   padding: 1em;
   transition: all 0.4s ease;
+  color: inherit;
   text-decoration: none;
-  color: white;
 }
 
 .app-navigation a:hover,
 .app-navigation a:focus {
   background: #2e437c;
 }
-
-.app-navigation ul{
-  width:100%;
-  list-style: none;
-  margin: 0;
-}
-
 .is-close-menu {
   order: -1;
   padding: 20px;
